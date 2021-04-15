@@ -110,12 +110,12 @@ func newMessage(subject string, body string, bodyContentType string) *Message {
 
 // NewMessage returns a new Message that can compose an email with attachments
 func NewMessage(subject string, body string) *Message {
-	return newMessage(subject, body, "text/plain")
+	return newMessage("", body, "text/plain")
 }
 
 // NewHTMLMessage returns a new Message that can compose an HTML email with attachments
 func NewHTMLMessage(subject string, body string) *Message {
-	return newMessage(subject, body, "text/html")
+	return newMessage("", body, "text/html")
 }
 
 // Tolist returns all the recipients of the email
