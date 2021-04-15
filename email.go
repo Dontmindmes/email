@@ -101,7 +101,7 @@ func (m *Message) AddHeader(key string, value string) Header {
 }
 
 func newMessage(subject string, body string, bodyContentType string) *Message {
-	m := &Message{Subject: subject, Body: body, BodyContentType: bodyContentType}
+	m := &Message{Subject: "", Body: body, BodyContentType: bodyContentType}
 
 	m.Attachments = make(map[string]*Attachment)
 
